@@ -1,0 +1,99 @@
+/* ============================================
+   Proposed Font Standardization (Corrected v2)
+   - No hard-coded colors in headings/paragraphs
+   - No high-specificity color:inherit overrides
+   - Opt-in Typography v1 spacing & helpers
+============================================ */
+
+/* Reset and Base */
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Inter', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  /* Colors are handled by your Tailwind classes */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Antonio', 'Inter', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 1.5rem 0 0.5rem 0;
+  /* No fixed color */
+}
+
+h1 { font-size: 2.25rem; } /* ~36px */
+h2 { font-size: 1.875rem; } /* ~30px */
+h3 { font-size: 1.5rem; }   /* ~24px */
+h4 { font-size: 1.25rem; }  /* ~20px */
+h5 { font-size: 1.125rem; } /* ~18px */
+h6 { font-size: 1rem; }     /* ~16px */
+
+/* Paragraphs */
+p {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  /* No fixed color */
+}
+
+/* Lists */
+ul, ol {
+  margin: 0 0 1rem 1.25rem;
+  padding: 0;
+}
+li { margin-bottom: 0.25rem; }
+
+/* Display font utility */
+.font-display {
+  font-family: 'Antonio', 'Inter', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+/* ============================================
+   Typography v1 (OPT-IN, page-scoped)
+   Add class="typography-v1" to <body> to test
+============================================ */
+
+.typography-v1 .font-display {
+  font-family: 'Antonio', 'Inter', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+/* Headings stacked */
+.typography-v1 h1 + h2,
+.typography-v1 h2 + h3,
+.typography-v1 h3 + h4 { margin-top: 0.75rem; }
+
+/* Headings followed by images/figures */
+.typography-v1 h1 + img, .typography-v1 h2 + img, .typography-v1 h3 + img,
+.typography-v1 h1 + figure, .typography-v1 h2 + figure, .typography-v1 h3 + figure { margin-top: 0.75rem; }
+
+/* Headings followed by text */
+.typography-v1 h1 + p,
+.typography-v1 h2 + p,
+.typography-v1 h3 + p { margin-top: 0.25rem; }
+
+/* Lists inside lists */
+.typography-v1 li > ul,
+.typography-v1 li > ol { margin-top: 0.5em; }
+
+/* Optional section title helper */
+.typography-v1 .section-title {
+  font-weight: 700; /* font-bold */
+  /* Inherit colors from Tailwind utilities */
+}
+@media (min-width: 768px) {
+  .typography-v1 .section-title { font-size: 1.875rem; } /* md:text-3xl */
+}
+
+/* NOTE:
+   We intentionally do NOT set `.typography-v1 h1, ... { color: inherit; }`
+   to avoid overriding Tailwind utilities like `.text-white` on hero headings
+   and CTA buttons. */
