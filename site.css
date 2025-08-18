@@ -1,0 +1,33 @@
+.nav-link[aria-current="page"]{font-weight:700;text-decoration:underline;text-underline-offset:.5em;color:var(--brand-color,#d97706);border-radius:.75rem;padding:.25rem .5rem;background:rgba(15,23,42,.06)}@media(prefers-color-scheme:dark){.nav-link[aria-current="page"]{background:rgba(2,6,23,.6)}}
+/* unified navbar styles */
+:root {
+  --brand-maroon: #6e1f24;
+  --accent-orange: #ff7a1a;
+}
+nav a.active, nav a[aria-current="page"] {
+  color: var(--accent-orange);
+  font-weight: 700;
+  text-decoration: none;
+}
+nav a { text-decoration: none; }
+nav a:hover { opacity: .85; }
+
+/* === Responsive utility shim (replaces Tailwind for nav only) === */
+.hidden { display: none !important; }
+/* md breakpoint ~768px */
+@media (min-width: 768px) {
+  .md\:hidden { display: none !important; }
+  .md\:flex { display: flex !important; }
+}
+/* Ensure mobile drawer never shows on desktop even if toggled in JS */
+@media (min-width: 768px) {
+  #mobile-menu { display: none !important; }
+}
+
+/* Responsive utility shim (for nav only) */
+.hidden { display: none !important; }
+@media (min-width: 768px) {
+  .md\:hidden { display: none !important; }
+  .md\:flex   { display: flex !important; }
+  #mobile-menu { display: none !important; }
+}
