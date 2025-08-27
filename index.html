@@ -33,7 +33,7 @@
         },
         plugins: []
       }
-    </script><link href="assets/site.css" rel="stylesheet"/>
+    </script><link href="/assets/site.css" rel="stylesheet"/>
 <link href="/css/proposed-font-standardization.css" rel="stylesheet"/>
 <link href="/css/typography.css" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&amp;family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/><style>
 /* Step 5: Respect reduced motion preferences */
@@ -41,6 +41,12 @@
   html { scroll-behavior: auto !important; }
 }
 </style>
+  <style>
+    nav a[aria-current="page"] {
+      text-decoration: underline;
+      font-weight: 600;
+    }
+  </style>
 </head>
 <body class="min-h-dvh bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100 font-body typography-v1">
 <a class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded-md focus:bg-white focus:px-3 focus:py-2 focus:text-slate-900" href="#main">Skip to content</a>
@@ -48,26 +54,26 @@
 <header class="sticky top-0 z-40 transition-all duration-300" id="site-header">
 <div class="mx-auto max-w-screen-xl px-4">
 <div class="flex items-center justify-between py-3 lg:py-4" id="header-inner">
-<a class="flex items-center gap-2" href="index.html">
+<a class="flex items-center gap-2" href="/index.html">
 <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">TC</span>
 <span class="font-display text-lg font-semibold tracking-wide">Team Combat USA DC</span>
 </a>
 <nav aria-label="Primary" class="hidden gap-6 md:flex">
-<a class="nav-link text-sm dark:text-slate-200" href="index.html" aria-current="page">Home</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="warrior-ethos.html">Warrior‑Ethos</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="history.html">History</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="styles.html">Styles</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="fundamentals.html">Fundamentals</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="gameplan.html">Gameplan</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="top-positions.html">Top Positions</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="standing.html">Standing</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="bottom-positions.html">Bottom Positions</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="leg-entanglement-positions.html">Leg Entanglement Positions</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="fitness.html">Fitness</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="drills.html">Drills</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="competition.html">Competition</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="self-defense.html">Self‑Defense</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="inspiration.html">Inspiration</a>
+<a class="nav-link text-sm dark:text-slate-200" href="/index.html" aria-current="page">Home</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/warrior-ethos.html">Warrior‑Ethos</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/history.html">History</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/styles.html">Styles</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/fundamentals.html">Fundamentals</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/gameplan.html">Gameplan</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/top-positions.html">Top Positions</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/standing.html">Standing</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/bottom-positions.html">Bottom Positions</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/leg-entanglement-positions.html">Leg Entanglement Positions</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/fitness.html">Fitness</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/drills.html">Drills</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/competition.html">Competition</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/self-defense.html">Self‑Defense</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/inspiration.html">Inspiration</a>
 </nav>
 <div class="flex items-center gap-2 md:gap-3">
 <button aria-label="Toggle dark mode" class="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 bg-white text-slate-700 hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-200 dark:hover:bg-slate-900" id="theme-toggle" type="button"></button>
@@ -78,24 +84,24 @@
 </div>
 </div>
 <!-- Mobile drawer -->
-<div class="absolute duration-200 h-[calc(100dvh-64px)] hidden w-full translate-y-[-16px] opacity-0 transition-all translate-y-[-8px] z-30" data-open="false" id="mobile-menu">
+<div class="absolute duration-200 h-[calc(100dvh-64px)] hidden w-full translate-y-[-16px] opacity-0 transition-all z-30" data-open="false" id="mobile-menu">
 <div class="mx-4 rounded-2xl border border-slate-200/60 bg-white/90 p-4 shadow-xl backdrop-blur dark:border-slate-800 dark:bg-slate-900/90">
 <nav aria-label="Mobile" class="grid gap-2 text-base">
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="index.html" aria-current="page">Home</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="warrior-ethos.html">Warrior‑Ethos</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="history.html">History</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="styles.html">Styles</a>
-<a class="nav-link text-sm dark:text-slate-200" href="fundamentals.html">Fundamentals</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="gameplan.html">Gameplan</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="top-positions.html">Top Positions</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="standing.html">Standing</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="bottom-positions.html">Bottom Positions</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="leg-entanglement-positions.html">Leg Entanglement Positions</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="fitness.html">Fitness</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="drills.html">Drills</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="competition.html">Competition</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="self-defense.html">Self‑Defense</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="inspiration.html">Inspiration</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/index.html" aria-current="page">Home</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/warrior-ethos.html">Warrior‑Ethos</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/history.html">History</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/styles.html">Styles</a>
+<a class="nav-link text-sm dark:text-slate-200" href="/fundamentals.html">Fundamentals</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/gameplan.html">Gameplan</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/top-positions.html">Top Positions</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/standing.html">Standing</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/bottom-positions.html">Bottom Positions</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/leg-entanglement-positions.html">Leg Entanglement Positions</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/fitness.html">Fitness</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/drills.html">Drills</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/competition.html">Competition</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/self-defense.html">Self‑Defense</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/inspiration.html">Inspiration</a>
 </nav>
 </div>
 </div>
@@ -109,8 +115,8 @@
 <h1 class="font-display text-3xl font-extrabold leading-tight sm:text-4xl">Principle‑driven training for real‑world skill.</h1>
 <p class="mt-3 max-w-2xl text-slate-200">Build base and posture, frames and movement, then pressure‑test through standing, clinch, and ground.</p>
 <div class="mt-4 flex gap-3">
-<a class="inline-flex items-center gap-2 rounded-xl bg-brand-700 px-4 py-2 font-semibold text-white hover:bg-brand-800" href="fundamentals.html">Start with Fundamentals</a>
-<a class="inline-flex items-center gap-2 rounded-xl border border-slate-200/60 bg-white/90 px-4 py-2 font-semibold hover:bg-white dark:border-slate-800 dark:bg-slate-900/60" href="self-defense.html">See Self‑Defense</a>
+<a class="inline-flex items-center gap-2 rounded-xl bg-brand-700 px-4 py-2 font-semibold text-white hover:bg-brand-800" href="/fundamentals.html">Start with Fundamentals</a>
+<a class="inline-flex items-center gap-2 rounded-xl border border-slate-200/60 bg-white/90 px-4 py-2 font-semibold hover:bg-white dark:border-slate-800 dark:bg-slate-900/60" href="/self-defense.html">See Self‑Defense</a>
 </div>
 </div>
 </div>
@@ -145,7 +151,7 @@
 <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Stay calm. Breathe through frames. Choose when to surge.</p>
 </article>
 </div>
-<div class="mt-4"><a class="inline-flex items-center gap-2 rounded-xl border border-slate-200/60 bg-white/90 px-4 py-2 font-semibold hover:bg-white dark:border-slate-800 dark:bg-slate-900/60" href="fundamentals.html">Explore Fundamentals →</a></div>
+<div class="mt-4"><a class="inline-flex items-center gap-2 rounded-xl border border-slate-200/60 bg-white/90 px-4 py-2 font-semibold hover:bg-white dark:border-slate-800 dark:bg-slate-900/60" href="/fundamentals.html">Explore Fundamentals →</a></div>
 </section>
 <!-- Self‑Defense Preview -->
 <section class="mt-12">
@@ -159,7 +165,7 @@
 <li><strong>Hands‑up frame:</strong> palms out, elbows in, chin tucked—non‑aggressive posture that protects your head.</li>
 <li><strong>If you fall:</strong> breakfall, frame, technical stand‑up, leave.</li>
 </ul>
-<a class="mt-4 inline-flex items-center gap-2 rounded-xl border border-slate-200/60 bg-white/90 px-4 py-2 font-semibold hover:bg-white dark:border-slate-800 dark:bg-slate-900/60" href="self-defense.html">Self‑Defense guide →</a>
+<a class="mt-4 inline-flex items-center gap-2 rounded-xl border border-slate-200/60 bg-white/90 px-4 py-2 font-semibold hover:bg-white dark:border-slate-800 dark:bg-slate-900/60" href="/self-defense.html">Self‑Defense guide →</a>
 </div>
 <div class="overflow-hidden rounded-xl border border-slate-200/60 dark:border-slate-800">
 </div>
@@ -171,26 +177,26 @@
 <p class="mt-2 text-slate-600 dark:text-slate-300">Default paths you’ll rehearse until they’re automatic.</p>
 <div class="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
 <article class="rounded-xl border border-slate-200/60 bg-white p-5 shadow-card dark:border-slate-800 dark:bg-slate-900">
-<h3 class="font-semibold"><a class="hover:text-brand-700" href="gameplan.html">Gameplan</a></h3>
+<h3 class="font-semibold"><a class="hover:text-brand-700" href="/gameplan.html">Gameplan</a></h3>
 <ul class="mt-2 list-disc pl-5 text-sm text-slate-600 dark:text-slate-300 space-y-1">
 <li>Rules: de‑escalate, break contact, escape; proportional force.</li>
 <li>Inside ties &amp; head position → entries → pass → mount/back → finish.</li>
 </ul>
 </article>
 <article class="rounded-xl border border-slate-200/60 bg-white p-5 shadow-card dark:border-slate-800 dark:bg-slate-900">
-<h3 class="font-semibold"><a class="hover:text-brand-700" href="standing.html">Standing</a></h3>
+<h3 class="font-semibold"><a class="hover:text-brand-700" href="/standing.html">Standing</a></h3>
 <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Grips, posture, level change, and finishes; sprawls when shot on.</p>
 </article>
 <article class="rounded-xl border border-slate-200/60 bg-white p-5 shadow-card dark:border-slate-800 dark:bg-slate-900">
-<h3 class="font-semibold"><a class="hover:text-brand-700" href="top-positions.html">Top Positions</a></h3>
+<h3 class="font-semibold"><a class="hover:text-brand-700" href="/top-positions.html">Top Positions</a></h3>
 <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Pass families (knee slice, body‑lock, stack). Settle side control, step to mount/back.</p>
 </article>
 <article class="rounded-xl border border-slate-200/60 bg-white p-5 shadow-card dark:border-slate-800 dark:bg-slate-900">
-<h3 class="font-semibold"><a class="hover:text-brand-700" href="bottom-positions.html">Bottom Positions</a></h3>
+<h3 class="font-semibold"><a class="hover:text-brand-700" href="/bottom-positions.html">Bottom Positions</a></h3>
 <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Break posture, control distance, create angles, then stand or sweep.</p>
 </article>
 <article class="rounded-xl border border-slate-200/60 bg-white p-5 shadow-card dark:border-slate-800 dark:bg-slate-900">
-<h3 class="font-semibold"><a class="hover:text-brand-700" href="leg-entanglement-positions.html">Leg Entanglements</a></h3>
+<h3 class="font-semibold"><a class="hover:text-brand-700" href="/leg-entanglement-positions.html">Leg Entanglements</a></h3>
 <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Modern positional hierarchy and control leading to reliable finishes.</p>
 </article>
 </div>
@@ -204,22 +210,22 @@
 <article class="rounded-xl border border-slate-200/60 bg-white p-5 shadow-card dark:border-slate-800 dark:bg-slate-900"><h3 class="font-semibold">Bridge &amp; Roll from Mount</h3><p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Trap, bridge with angle, land in guard or stand.</p></article>
 <article class="rounded-xl border border-slate-200/60 bg-white p-5 shadow-card dark:border-slate-800 dark:bg-slate-900"><h3 class="font-semibold">Technical Stand‑Up</h3><p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Create distance and stand safely.</p></article>
 </div>
-<div class="mt-4"><a class="inline-flex items-center gap-2 rounded-xl border border-slate-200/60 bg-white/90 px-4 py-2 font-semibold hover:bg-white dark:border-slate-800 dark:bg-slate-900/60" href="drills.html">More drills →</a></div>
+<div class="mt-4"><a class="inline-flex items-center gap-2 rounded-xl border border-slate-200/60 bg-white/90 px-4 py-2 font-semibold hover:bg-white dark:border-slate-800 dark:bg-slate-900/60" href="/drills.html">More drills →</a></div>
 </section>
 <!-- Culture & Background -->
 <section class="mt-12">
 <h2 class="font-display text-2xl font-bold">Culture &amp; background</h2>
 <div class="mt-4 grid gap-4 md:grid-cols-3">
 <article class="rounded-xl border border-slate-200/60 bg-white p-5 shadow-card dark:border-slate-800 dark:bg-slate-900">
-<h3 class="font-semibold"><a class="hover:text-brand-700" href="history.html">History</a></h3>
+<h3 class="font-semibold"><a class="hover:text-brand-700" href="/history.html">History</a></h3>
 <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Where our approach comes from and how it evolved.</p>
 </article>
 <article class="rounded-xl border border-slate-200/60 bg-white p-5 shadow-card dark:border-slate-800 dark:bg-slate-900">
-<h3 class="font-semibold"><a class="hover:text-brand-700" href="warrior-ethos.html">Warrior Ethos</a></h3>
+<h3 class="font-semibold"><a class="hover:text-brand-700" href="/warrior-ethos.html">Warrior Ethos</a></h3>
 <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Standards for effort, humility, and responsibility—on and off the mats.</p>
 </article>
 <article class="rounded-xl border border-slate-200/60 bg-white p-5 shadow-card dark:border-slate-800 dark:bg-slate-900">
-<h3 class="font-semibold"><a class="hover:text-brand-700" href="inspiration.html">Inspiration</a></h3>
+<h3 class="font-semibold"><a class="hover:text-brand-700" href="/inspiration.html">Inspiration</a></h3>
 <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Principles and prompts that keep you consistent.</p>
 </article>
 </div>
@@ -229,15 +235,15 @@
 <h2 class="font-display text-2xl font-bold">Train for your goals</h2>
 <div class="mt-4 grid gap-4 md:grid-cols-3">
 <article class="rounded-xl border border-slate-200/60 bg-white p-5 shadow-card dark:border-slate-800 dark:bg-slate-900">
-<h3 class="font-semibold"><a class="hover:text-brand-700" href="fitness.html">Fitness</a></h3>
+<h3 class="font-semibold"><a class="hover:text-brand-700" href="/fitness.html">Fitness</a></h3>
 <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Conditioning that supports skill: breathing, pace, and usable strength.</p>
 </article>
 <article class="rounded-xl border border-slate-200/60 bg-white p-5 shadow-card dark:border-slate-800 dark:bg-slate-900">
-<h3 class="font-semibold"><a class="hover:text-brand-700" href="styles.html">Styles</a></h3>
+<h3 class="font-semibold"><a class="hover:text-brand-700" href="/styles.html">Styles</a></h3>
 <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">How different grappling and striking styles inform our curriculum.</p>
 </article>
 <article class="rounded-xl border border-slate-200/60 bg-white p-5 shadow-card dark:border-slate-800 dark:bg-slate-900">
-<h3 class="font-semibold"><a class="hover:text-brand-700" href="competition.html">Competition</a></h3>
+<h3 class="font-semibold"><a class="hover:text-brand-700" href="/competition.html">Competition</a></h3>
 <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Translate principles into rule‑sets; manage risk, time, and score.</p>
 </article>
 </div>
@@ -251,21 +257,21 @@
 <span class="font-display text-lg font-semibold">Team Combat USA DC</span>
 </div>
 <nav aria-label="Primary" class="hidden gap-6 md:flex">
-<a class="nav-link text-sm dark:text-slate-200" href="index.html" aria-current="page">Home</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="warrior-ethos.html">Warrior‑Ethos</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="history.html">History</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="styles.html">Styles</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="fundamentals.html">Fundamentals</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="gameplan.html">Gameplan</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="top-positions.html">Top Positions</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="standing.html">Standing</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="bottom-positions.html">Bottom Positions</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="leg-entanglement-positions.html">Leg Entanglement Positions</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="fitness.html">Fitness</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="drills.html">Drills</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="competition.html">Competition</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="self-defense.html">Self‑Defense</a>
-<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="inspiration.html">Inspiration</a>
+<a class="nav-link text-sm dark:text-slate-200" href="/index.html" aria-current="page">Home</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/warrior-ethos.html">Warrior‑Ethos</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/history.html">History</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/styles.html">Styles</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/fundamentals.html">Fundamentals</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/gameplan.html">Gameplan</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/top-positions.html">Top Positions</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/standing.html">Standing</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/bottom-positions.html">Bottom Positions</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/leg-entanglement-positions.html">Leg Entanglement Positions</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/fitness.html">Fitness</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/drills.html">Drills</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/competition.html">Competition</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/self-defense.html">Self‑Defense</a>
+<a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/inspiration.html">Inspiration</a>
 </nav>
 </div>
 <p class="mt-6 text-xs text-slate-500">© <span id="year"></span> Team Combat USA DC. All rights reserved.</p>
@@ -275,7 +281,7 @@
 <button aria-label="Back to top" class="fixed bottom-4 right-4 z-40 hidden rounded-full border border-slate-200/60 bg-white px-3 py-2 text-slate-700 shadow-card hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-200" id="backToTop" type="button">
       ↑ Top
     </button>
-<script defer="" src="assets/site.js"></script>
+<script defer="" src="/assets/site.js"></script>
 <script>(function () {
   function sample(el) {
     if (!el) return "(n/a)";
