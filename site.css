@@ -31,3 +31,141 @@ nav a:hover { opacity: .85; }
   .md\:flex   { display: flex !important; }
   #mobile-menu { display: none !important; }
 }
+
+/* === Team Combat USA DC: Design Tokens & Base Styles === */
+:root {
+  --font-sans: ui-sans-serif, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  --font-xs: 0.8125rem;
+  --font-sm: 0.9375rem;
+  --font-base: 1rem;
+  --font-lg: 1.125rem;
+  --font-xl: 1.25rem;
+  --font-2xl: 1.5rem;
+  --font-3xl: 1.875rem;
+  --font-4xl: 2.25rem;
+  --font-5xl: 3rem;
+
+  --lh-tight: 1.2;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.7;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  --container-narrow: 40rem;
+  --container-wide: 72rem;
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --border-1: 1px solid rgba(0,0,0,0.1);
+}
+
+@media (min-width: 64rem) {
+  :root {
+    --font-3xl: 2rem;
+    --font-4xl: 2.5rem;
+    --font-5xl: 3.5rem;
+  }
+}
+
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+
+html { font-size: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--font-base);
+  line-height: var(--lh-normal);
+  -webkit-font-smoothing: antialiased;
+  color: #111;
+  background: #fff;
+}
+
+img, svg, video, canvas { max-width: 100%; height: auto; }
+img { display: block; }
+
+p, ul, ol, dl, blockquote, pre, table {
+  margin-top: 0;
+  margin-bottom: var(--space-4);
+}
+
+ul, ol { padding-left: var(--space-6); }
+
+a {
+  color: #0a58ca;
+  text-underline-offset: 0.15em;
+}
+a:hover, a:focus { text-decoration-thickness: 2px; }
+
+small { font-size: var(--font-xs); }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: var(--lh-tight);
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-3);
+}
+h1 { font-size: var(--font-5xl); }
+h2 { font-size: var(--font-4xl); }
+h3 { font-size: var(--font-3xl); }
+h4 { font-size: var(--font-2xl); }
+h5 { font-size: var(--font-xl); }
+h6 { font-size: var(--font-lg); }
+
+.flow > * + * { margin-top: var(--flow, var(--space-4)); }
+
+button, .btn {
+  font: inherit;
+  line-height: var(--lh-tight);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  border: var(--border-1);
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+}
+button:hover, .btn:hover { filter: brightness(1.05); }
+button:disabled, .btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+input, select, textarea {
+  font: inherit;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  border: var(--border-1);
+}
+
+.container {
+  width: min(100%, var(--container-wide));
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+}
+.container.narrow { width: min(100%, var(--container-narrow)); }
+
+.mt-0 { margin-top: 0 !important; }
+.mt-2 { margin-top: var(--space-2) !important; }
+.mt-4 { margin-top: var(--space-4) !important; }
+.mt-6 { margin-top: var(--space-6) !important; }
+.mb-0 { margin-bottom: 0 !important; }
+.mb-2 { margin-bottom: var(--space-2) !important; }
+.mb-4 { margin-bottom: var(--space-4) !important; }
+.mb-6 { margin-bottom: var(--space-6) !important; }
+.pt-4 { padding-top: var(--space-4) !important; }
+.pb-4 { padding-bottom: var(--space-4) !important; }
+.px-4 { padding-left: var(--space-4) !important; padding-right: var(--space-4) !important; }
+
+:focus-visible { outline: 3px solid #94c1ff; outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
