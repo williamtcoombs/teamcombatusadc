@@ -1,66 +1,79 @@
 <!DOCTYPE html>
 <html class="scroll-smooth" lang="en">
- <head><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-<link href="/assets/site.css" rel="stylesheet">
-<link href="/css/typography.css" rel="stylesheet">
-<link href="/css/proposed-font-standardization.css" rel="stylesheet">
-
-<meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
-   Self‑Defense — Team Combat USA DC
-  </title>
-  <meta content="Simple, principle‑driven self‑defense: awareness, de‑escalation, safe disengagement, and fundamentals under stress." name="description"/>
-  <meta content="#7f1d1d" name="theme-color"/>
-  <!-- Open Graph / Twitter -->
-  <meta content="Self‑Defense — Team Combat USA DC" property="og:title"/>
-  <meta content="Principles and pathways to avoid, de‑escalate, disengage, and get home safe." property="og:description"/>
-  <meta content="website" property="og:type"/>
-  <meta content="/assets/img/self_defense_hero.jpeg" property="og:image"/>
-  <meta content="summary_large_image" name="twitter:card"/>
-
-<!-- Tailwind (CDN for starter) -->
-  <script src="https://cdn.tailwindcss.com">
-  </script>
-  <script>
-   tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            colors: {
-              brand: {
-                50:'#fff1f1',100:'#ffe1e1',200:'#ffc8c8',300:'#ffa3a3',400:'#fb6b6b',
-                500:'#e11d1d',600:'#b91c1c',700:'#991b1b',800:'#7f1d1d',900:'#631919',950:'#3a0f0f'
-              },
-              accent: {
-                50:'#fff7ed',100:'#ffedd5',200:'#fed7aa',300:'#fdba74',400:'#fb923c',
-                500:'#f59e0b',600:'#d97706',700:'#b45309',800:'#92400e',900:'#78350f'
-              },
-            },
-            fontFamily: {
-              display: ['Antonio','ui-sans-serif','system-ui','sans-serif'],
-              body: ['Inter','ui-sans-serif','system-ui','sans-serif']
-            },
-            borderRadius: { xl: '1rem' },
-            boxShadow: { card: '0 10px 25px -10px rgba(0,0,0,.25)'}
-          }
-        },
-        plugins: []
-      }
-  </script>
+<head>
   <!-- Fonts -->
-  <!-- Structured data -->
-  <script type="application/ld+json">
-   {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Self‑Defense",
-        "description": "Principle‑driven self‑defense: awareness, de‑escalation, safe disengagement, and fundamentals under stress.",
-        "publisher": {"@type": "Organization","name":"Team Combat USA DC"}
-      }
-  </script></head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link href="/assets/site.css" rel="stylesheet">
+  <link href="/css/typography.css" rel="stylesheet">
+  <link href="/css/proposed-font-standardization.css" rel="stylesheet">
+
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO core: title, description, canonical, OG/Twitter -->
+  <title>Self-Defense — Team Combat USA DC</title>
+  <meta name="description" content="Practical self-defense techniques and strategies from Team Combat USA DC: real-world skills for awareness, protection, and confidence.">
+  <link rel="canonical" href="https://www.teamcombatusadc.com/self-defense.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Team Combat USA DC">
+  <meta property="og:title" content="Self-Defense — Team Combat USA DC">
+  <meta property="og:description" content="Practical self-defense techniques and strategies from Team Combat USA DC: real-world skills for awareness, protection, and confidence.">
+  <meta property="og:url" content="https://www.teamcombatusadc.com/self-defense.html">
+  <meta property="og:image" content="https://www.teamcombatusadc.com/assets/img/og-default.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Theme color -->
+  <meta name="theme-color" content="#f71d1d">
+
+  <!-- Tailwind (CDN for now; switch to compiled CSS later) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fff1f1', 100: '#ffe1e1', 200: '#ffc8c8', 300: '#ffa3a3',
+              400: '#fb6b6b', 500: '#f71d1d', 600: '#991c1c', 700: '#991b1b',
+              800: '#631919', 900: '#3a0f0f', 950: '#3a0f0f'
+            },
+            accent: {
+              50: '#f7ffd0', 100: '#ffed95', 200: '#fed7aa', 300: '#fdbd74',
+              400: '#fb923c', 500: '#f59e0b', 600: '#d97706', 700: '#b45309',
+              800: '#92400e', 900: '#78350f'
+            }
+          },
+          fontFamily: {
+            display: ['Antonio', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            body: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+          },
+          borderRadius: {
+            xl: '1rem'
+          },
+          boxShadow: {
+            card: '0 10px 25px -10px rgba(0,0,0,.25)'
+          }
+        }
+      },
+      plugins: []
+    }
+  </script>
+
+  <style>
+    /* Step 5: Respect reduced motion preferences */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
  <body class="min-h-dvh bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100 font-body typography-v1">
   <a class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded-lg focus:bg-white/90 focus:px-3 focus:py-2 focus:text-slate-900" href="#main">
    Skip to content
