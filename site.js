@@ -30,32 +30,38 @@ if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded'
     });
   } catch(e){}
 })();
-// Auto-set aria-current on nav links based on current path
+// Auto-set aria-current on nav links based on exact path
 (function () {
   try {
-    const here = location.pathname.replace(/\/+$/, '') || '/index.html';
-    const links = document.querySelectorAll('nav a[href]');
-    let matched = false;
+    const hereRaw = location.pathname;
+    const here = hereRaw === '/' ? '/index.html' : hereRaw.replace(/\/+$/, '');
 
-    links.forEach(a => {
-      a.removeAttribute('aria-current');
-      const href = a.getAttribute('href');
-      if (!href) return;
-      const normalized = href.replace(/\/+$/, '');
-      if (normalized === here || (here === '/' && normalized === '/index.html')) {
-        a.setAttribute('aria-current', 'page');
-        matched = true;
-      }
-    });
+    // Get all navs separately to avoid duplicating aria-current per nav
+    document.querySelectorAll('nav').forEach(nav => {
+      const links = nav.querySelectorAll('a[href]');
+      let matched = false;
 
-    // Fallback: match section pages (optional)
-    if (!matched) {
       links.forEach(a => {
+        a.removeAttribute('aria-current');
         const href = a.getAttribute('href');
-        if (href && here.startsWith(href.replace(/\/+$/, ''))) {
+        if (!href) return;
+        const normalized = href.replace(/\/+$/, '');
+        if (normalized === here) {
           a.setAttribute('aria-current', 'page');
+          matched = true;
         }
       });
-    }
+
+      // Optional fallback: partial match (section-level nav)
+      if (!matched) {
+        links.forEach(a => {
+          const href = a.getAttribute('href');
+          if (href && here.startsWith(href.replace(/\/+$/, ''))) {
+            a.setAttribute('aria-current', 'page');
+          }
+        });
+      }
+    });
   } catch {}
 })();
+
