@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html class="scroll-smooth" lang="en">
 <head>
+  <meta charset="utf-8">
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +13,6 @@
   <link href="/css/proposed-font-standardization.css" rel="stylesheet">
 
   <!-- Meta -->
-  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- SEO core: title, description, canonical, OG/Twitter -->
@@ -29,7 +29,7 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Inspiration — Team Combat USA DC">
-  <meta name="twitter:description" content="Guiding principles to inspire growth and resilience at Team Combat USA DC.">
+  <meta name="twitter:description" content="Motivational quotes, stories, and guiding principles to inspire growth and resilience at Team Combat USA DC.">
   <meta name="twitter:image" content="https://www.teamcombatusadc.com/assets/img/og-default.png">
 
 
@@ -50,7 +50,7 @@
               800: '#7f1d1d', 900: '#631919', 950: '#3a0f0f'
             },
             accent: {
-              50: '#fff7dd', 100: '#ffed95', 200: '#fed7aa', 300: '#fdbd74',
+              50: '#fff7ed', 100: '#ffedd5', 200: '#fed7aa', 300: '#fdba74',
               400: '#fb923c', 500: '#f59e0b', 600: '#d97706', 700: '#b45309',
               800: '#92400e', 900: '#78350f'
             }
@@ -244,7 +244,7 @@
     </div>
    </div>
    <div class="w-full aspect-video rounded-xl overflow-hidden shadow-lg mt-8">
-    <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="w-full h-full" frameborder="0" loading="lazy" src="https://www.youtube.com/embed/W90ZkWIiSNc" title="inspiration">
+    <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="w-full h-full" frameborder="0" loading="lazy" src="https://www.youtube.com/embed/W90ZkWIiSNc" title="inspiration video">
     </iframe>
    </div>
   </main>
@@ -302,9 +302,7 @@
       <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/self-defense.html">
        Self‑Defense
       </a>
-      <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/inspiration.html" aria-current="page">
-       Inspiration
-      </a>
+      <a href="/inspiration.html" class="nav-link text-sm text-slate-600 hover:text-brand-700 dark:text-slate-300">Inspiration</a>
      </nav>
     </div>
     <p class="mt-6 text-xs text-slate-500">
@@ -319,45 +317,6 @@
    ↑ Top
   </button>
   <script defer="" src="/assets/site.js">
-  </script>
-  <script>
-   (function () {
-  function sample(el) {
-    if (!el) return "(n/a)";
-    return window.getComputedStyle(el).fontFamily;
-  }
-  function log() {
-    var body = document.body;
-    var h1 = document.querySelector("h1");
-    var p = document.querySelector("p");
-    var info = {
-      body: sample(body),
-      h1: sample(h1),
-      p: sample(p)
-    };
-    console.log("[FontCheck]", info);
-    // visible, non-intrusive badge for quick glance
-    var badge = document.createElement('div');
-    badge.textContent = 'Fonts ✓';
-    badge.style.position = 'fixed';
-    badge.style.bottom = '10px';
-    badge.style.right = '10px';
-    badge.style.padding = '4px 8px';
-    badge.style.background = 'rgba(0,0,0,0.6)';
-    badge.style.color = '#fff';
-    badge.style.fontSize = '12px';
-    badge.style.borderRadius = '6px';
-    badge.style.zIndex = '99999';
-    badge.title = 'Open DevTools console to see computed font-family for body/h1/p';
-    document.body.appendChild(badge);
-    setTimeout(function(){ badge.remove(); }, 3500);
-  }
-  if (document.readyState === "complete" || document.readyState === "interactive") {
-    setTimeout(log, 0);
-  } else {
-    document.addEventListener("DOMContentLoaded", log);
-  }
-})();
   </script>
  </body>
 </html>
