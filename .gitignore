@@ -1,0 +1,40 @@
+# --- Live server files (we keep .txt templates instead) ---
+.htaccess
+robots.txt
+
+# --- Node / build tooling cache (even if you rarely use it) ---
+node_modules/
+.npm/
+.pnpm-store/
+.yarn/
+.yarnrc.yml
+package-lock.json
+
+# --- Logs & dumps ---
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# --- Editor/OS cruft ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# --- Build caches (safe to ignore if they appear) ---
+.cache/
+.parcel-cache/
+.tmp/
+.tmp*/
+dist/
+
+# --- Source maps (keep if you actually want them) ---
+*.map
+
+# --- Misc ---
+.env
+.env.*
