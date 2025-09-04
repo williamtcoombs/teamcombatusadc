@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Optional: place custom styles below using Tailwind layers.
+@layer base {
+  /* Example:
+  html { scroll-behavior: smooth; }
+  .skip-link { @apply sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-50; }
+  */
+}
+
+@layer components {
+  /* Example component class:
+  .btn { @apply inline-flex items-center gap-2 rounded-xl px-4 py-2 font-medium shadow; }
+  */
+}
