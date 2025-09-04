@@ -1,8 +1,11 @@
 name: Build CSS
-
 on:
   push:
     branches: [ main ]
+
+# 👇 Add this block
+permissions:
+  contents: write
 
 jobs:
   build:
