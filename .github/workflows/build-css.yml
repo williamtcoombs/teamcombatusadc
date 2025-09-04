@@ -12,23 +12,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0      # ensures committing works reliably
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
+          # ⛔ removed "cache: 'npm'" to avoid lockfile requirement
 
-      # Use npm install (works whether or not there's a package-lock.json)
       - name: Install deps
         run: npm install --no-audit --no-fund
-
-      # Optional: helps debug if anything fails
-      - name: Print versions
-        run: |
-          node -v
-          npm -v
-          npx tailwindcss -v
 
       - name: Build Tailwind
         run: npm run build:css
@@ -38,6 +30,5 @@ jobs:
         with:
           commit_message: "build: generate compiled Tailwind CSS"
           file_pattern: assets/site.css
-          push_options: '--force-with-lease'
           commit_user_name: github-actions[bot]
           commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
