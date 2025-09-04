@@ -2,13 +2,13 @@
 (() => {
   const THEME_KEY = 'tc-theme';
 
-  // --- Theme init from localStorage or system
+  // Theme init from localStorage or system
   const saved = localStorage.getItem(THEME_KEY);
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const initialDark = saved ? saved === 'dark' : prefersDark;
   document.documentElement.classList.toggle('dark', initialDark);
 
-  // --- Theme toggle button (any element with [data-theme-toggle])
+  // Theme toggle + back-to-top click handlers
   document.addEventListener('click', (e) => {
     const t = e.target.closest('[data-theme-toggle]');
     if (t) {
@@ -16,23 +16,18 @@
       localStorage.setItem(THEME_KEY, isDark ? 'dark' : 'light');
     }
     const btt = e.target.closest('[data-back-to-top]');
-    if (btt) {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+    if (btt) window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
-  // --- Back-to-top show/hide
+  // Back-to-top show/hide
   const bttEl = document.querySelector('[data-back-to-top]');
   if (bttEl) {
-    const toggle = () => {
-      const show = window.scrollY > 400;
-      bttEl.classList.toggle('btt-show', show);
-    };
+    const toggle = () => bttEl.classList.toggle('btt-show', window.scrollY > 400);
     toggle();
     window.addEventListener('scroll', toggle, { passive: true });
   }
 
-  // --- Nav active highlighting
+  // Nav active highlighting (add aria-current/page and optional class)
   try {
     const path = location.pathname.replace(/\/index\.html$/, '/').toLowerCase();
     document.querySelectorAll('nav a[href]').forEach((a) => {
@@ -48,7 +43,7 @@
     });
   } catch {}
 
-  // --- Remove any dev-only font notifications
+  // Remove any dev-only font notifications/widgets
   const devFont = document.querySelector('[data-font-notice], #fontcheck, .fonts-widget');
   if (devFont) devFont.remove();
 })();
