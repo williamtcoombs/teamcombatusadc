@@ -2,6 +2,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./**/*.html"],
+  // Keep runtime-only classes that JS adds so Tailwind doesn't purge them
+  safelist: [
+    "nav-active",
+    "btt",
+    "btt-show"
+  ],
   theme: {
     extend: {
       fontFamily: {
