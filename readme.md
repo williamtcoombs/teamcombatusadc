@@ -110,3 +110,66 @@ npm run build:css
 ---
 _Maintainer: you (solo). Keep commits small; validate on preview; then ship to prod._
 
+
+Do this now (fast path)
+
+Kick the build
+
+In GitHub, open README.md → add a newline → Commit directly to main.
+
+Go to Actions → Build CSS → latest run. You should see it start and finish green.
+
+Verify the output
+
+After the run, open /assets/site.css in the repo.
+
+It should be big (typically 100–300 KB+) and full of Tailwind utilities.
+
+If you see the auto-commit “build: generate compiled Tailwind CSS”, you’re golden.
+
+Update your dev server
+
+Download that large assets/site.css from GitHub.
+
+In your host’s File Manager, upload it to /assets/site.css (overwrite).
+
+In Chrome DevTools (Network), reload the page and click /assets/site.css:
+
+Status: 200
+
+Size: large (not ~1–2 KB)
+
+Hard refresh the page (Cmd/Ctrl + Shift + R).
+
+Make sure pages point to the right file
+
+Each page’s <head> should contain exactly:
+
+<link rel="stylesheet" href="/assets/site.css">
+
+
+No typography.css, no proposed-font-standardization.css, no site.css in page folders, no Tailwind CDN.
+
+If you want me to enforce that automatically, deploy the cleanup ZIP I gave earlier (teamcombatusadc-canonical-assets.zip) after the big CSS is on the server.
+
+If the Action doesn’t commit assets/site.css
+
+Double-check these at the repo root:
+
+tailwind.config.js with content: ["./**/*.html"]
+
+postcss.config.js with tailwindcss + autoprefixer
+
+assets/tailwind.css with:
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+package.json script:
+
+"build:css": "npx tailwindcss -i ./assets/tailwind.css -o ./assets/site.css --minify"
+
+
+Then push another tiny commit to trigger the workflow and check the logs.
