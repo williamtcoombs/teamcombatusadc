@@ -8,8 +8,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&amp;family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
 <!-- Styles -->
 <link href="/assets/site.css" rel="stylesheet"/>
-<link href="/css/typography.css" rel="stylesheet"/>
-<link href="/css/proposed-font-standardization.css" rel="stylesheet"/>
+
+
 <!-- Meta -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
@@ -27,15 +27,13 @@
 <!-- Theme color -->
 <meta content="#f71d1d" name="theme-color"/>
 <!-- Tailwind (CDN for now; switch to compiled CSS later) -->
-
-
 <style>
     /* Step 5: Respect reduced motion preferences */
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto !important; }
     }
   </style>
-<meta content="Self-Defense — Team Combat USA DC" name="twitter:title"/><meta content="Practical self-defense techniques and strategies from Team Combat USA DC: real-world skills for awareness, protection, and confidence." name="twitter:description"/></head>
+<meta content="Self-Defense — Team Combat USA DC" name="twitter:title"/><meta content="Practical self-defense techniques and strategies from Team Combat USA DC: real-world skills for awareness, protection, and confidence." name="twitter:description"/><script defer="True" src="/assets/site.v2025-09-05-03.js"></script></head>
 <body class="min-h-dvh bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100 font-body typography-v1">
 <a class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded-lg focus:bg-white/90 focus:px-3 focus:py-2 focus:text-slate-900" href="#main">
    Skip to content
@@ -49,7 +47,7 @@
 <span class="font-display text-lg font-semibold tracking-wide">Team Combat USA DC</span>
 </a>
 <!-- Desktop nav -->
-<nav aria-label="Primary" class="hidden gap-6 md:flex">
+<nav aria-label="Primary" class="hidden gap-6 md:flex is-collapsible" hidden="" id="mobile-menu">
 <a class="nav-link text-sm dark:text-slate-200" href="/index.html">Home</a>
 <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/warrior-ethos.html">Warrior-Ethos</a>
 <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/history.html">History</a>
@@ -68,8 +66,8 @@
 </nav>
 <!-- Buttons -->
 <div class="flex items-center gap-2 md:gap-3">
-<button aria-label="Toggle dark mode" class="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-700 hover:bg-slate-100 dark:border-slate-800 dark:text-slate-200 dark:hover:bg-slate-900" id="theme-toggle" type="button">☾</button>
-<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-700 hover:bg-slate-100 dark:border-slate-800 dark:text-slate-200 dark:hover:bg-slate-900" id="menu-toggle" type="button">
+<button aria-label="Toggle dark mode" class="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-700 hover:bg-slate-100 dark:border-slate-800 dark:text-slate-200 dark:hover:bg-slate-900" data-theme-toggle="" id="theme-toggle" type="button">☾</button>
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-700 hover:bg-slate-100 dark:border-slate-800 dark:text-slate-200 dark:hover:bg-slate-900" data-menu-toggle="mobile-menu" id="menu-toggle" type="button">
 <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
 </button>
 </div>
@@ -356,8 +354,6 @@
    /* Page-specific tweaks */
       .prose :where(h2,h3) { scroll-margin-top: 96px; }
   </style>
-<script defer="" src="/assets/site.js">
-</script>
 <script>
    (function () {
   function sample(el) {
