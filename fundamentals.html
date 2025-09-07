@@ -711,5 +711,29 @@
   }
 })();
   </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var btn = document.getElementById('menu-toggle');
+    var drawer = document.getElementById('mobile-menu');
+    if (!btn || !drawer) return;
+
+    function setOpen(open) {
+      drawer.setAttribute('data-open', open ? 'true' : 'false');
+      btn.setAttribute('aria-expanded', String(open));
+      drawer.classList.toggle('hidden', !open);
+      drawer.classList.toggle('invisible', !open);
+      drawer.classList.toggle('opacity-0', !open);
+      drawer.classList.toggle('translate-y-[-8px]', !open);
+    }
+
+    btn.addEventListener('click', function () {
+      var open = drawer.getAttribute('data-open') === 'true';
+      setOpen(!open);
+    });
+
+    // Ensure correct initial state
+    setOpen(false);
+  });
+</script>
 </body>
 </html>
