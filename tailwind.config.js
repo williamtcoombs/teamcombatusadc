@@ -10,7 +10,9 @@ module.exports = {
     'opacity-0',
     'translate-y-[-8px]',
   ],
-  theme: { extend: {} },
+  theme: {
+    extend: {},
+  },
   plugins: [],
   darkMode: 'class',
 };
