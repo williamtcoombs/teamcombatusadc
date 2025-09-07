@@ -10,11 +10,7 @@ module.exports = {
     'opacity-0',
     'translate-y-[-8px]',
   ],
-  theme: {
-    extend: {
-      // Add any customizations here, e.g., colors, spacing, etc.
-    },
-  },
+  theme: { extend: {} },
   plugins: [],
-  darkMode: 'class', // Matches your <html class="dark"> toggle
+  darkMode: 'class',
 };
