@@ -1,0 +1,16 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./**/*.html",
+    "./assets/**/*.js",
+  ],
+  safelist: [
+    'hidden',
+    'invisible',
+    'opacity-0',
+    'translate-y-[-8px]',
+  ],
+  theme: { extend: {} },
+  plugins: [],
+  darkMode: 'class',
+};
