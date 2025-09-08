@@ -742,8 +742,22 @@
     if (!btn || !drawer) return;
 
     function setOpen(open) {
+      // ARIA/state
       drawer.setAttribute('data-open', open ? 'true' : 'false');
       btn.setAttribute('aria-expanded', String(open));
+
+      // Make sure display isn't blocked by the hidden attribute/class
+      if (open) {
+        drawer.removeAttribute('hidden');
+        if (drawer.classList) drawer.classList.remove('hidden');
+        if (window.innerWidth < 1024) drawer.style.display = 'block';
+      } else {
+        drawer.setAttribute('hidden', '');
+        if (drawer.classList) drawer.classList.add('hidden');
+        drawer.style.display = '';
+      }
+
+      // Visibility/animation classes
       drawer.classList.toggle('invisible', !open);
       drawer.classList.toggle('opacity-0', !open);
       drawer.classList.toggle('-translate-y-2', !open);
@@ -758,5 +772,6 @@
     setOpen(false);
   });
 </script>
+
 </body>
 </html>
