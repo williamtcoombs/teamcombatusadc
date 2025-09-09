@@ -416,9 +416,7 @@
 </div>
 </footer>
 <!-- Back to top -->
-<button aria-label="Back to top" class="fixed bottom-4 right-4 z-40 inline-flex translate-y-6 items-center justify-center rounded-xl border border-slate-200/60 bg-white px-3 py-2 text-sm font-semibold text-slate-700 opacity-0 shadow-lg transition-all duration-300 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900 dark:text-slate-200" id="backToTop" type="button">
-    ↑ Top
-   </button>
+
 <style>
     /* Page-specific tweaks */
       .prose :where(h2,h3) { scroll-margin-top: 96px; }
@@ -496,5 +494,24 @@
   });
 </script>
 
+<script>
+(function () {
+  if (window.__TC_BTT_SHADOW__) return;
+  window.__TC_BTT_SHADOW__ = true;
+  var showAt = 60;
+  var host = document.createElement('div');
+  host.style.position='fixed'; host.style.bottom='20px'; host.style.right='20px';
+  host.style.zIndex='2147483647'; host.style.pointerEvents='auto';
+  document.body.appendChild(host);
+  var root = host.attachShadow({mode:'open'});
+  root.innerHTML = '<style>button{all:initial;font:600 14px/1 system-ui,-apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial;display:none;padding:.55rem .75rem;border-radius:9999px;background:#fff;color:#111;box-shadow:0 8px 24px rgba(0,0,0,.18);cursor:pointer}button.show{display:inline-block}</style><button id="btn" aria-label="Back to top">↑</button>';
+  var btn = root.getElementById('btn');
+  function y(){return window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0}
+  function onScroll(){ if(y()>showAt) btn.classList.add('show'); else btn.classList.remove('show'); }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  btn.addEventListener('click', function(){ try{window.scrollTo({top:0,behavior:'smooth'})}catch(e){window.scrollTo(0,0)}; btn.blur(); });
+})();
+</script>
 </body>
 </html>
