@@ -1,4 +1,5 @@
 # Begin cache control #
+ErrorDocument 404 /404.html
 ExpiresActive on
 ExpiresActive off
 <FilesMatch ".*">
