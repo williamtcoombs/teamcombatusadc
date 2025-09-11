@@ -8,8 +8,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&amp;family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
 <!-- Styles -->
 <link href="/assets/site.css" rel="stylesheet"/>
-
-
 <!-- Meta -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
@@ -27,77 +25,83 @@
 <!-- Theme color -->
 <meta content="#7f1d1d" name="theme-color"/>
 <!-- Tailwind (CDN for now; switch to compiled CSS later) -->
-<meta content="Standing — Team Combat USA" name="twitter:title"/><meta content="Standing phase essentials: takedowns, clinch entries, posture, and control for Team Combat USA training." name="twitter:description"/><script defer="True" src="/assets/site.js"></script></head>
+<meta content="Standing — Team Combat USA" name="twitter:title"/><meta content="Standing phase essentials: takedowns, clinch entries, posture, and control for Team Combat USA training." name="twitter:description"/><script defer="True" src="/assets/site.js"></script><style>/* Page-scoped: Remove faint focus/shadow ring in iOS Safari/Chrome for the mobile drawer */
+#mobile-menu a:focus,
+#mobile-menu a:focus-visible,
+#mobile-menu button:focus,
+#mobile-menu button:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Reduce iOS tap highlight halo on links/buttons in the mobile drawer */
+#mobile-menu a, 
+#mobile-menu button {
+  -webkit-tap-highlight-color: transparent;
+}</style></head>
 <body class="min-h-dvh bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100 font-body typography-v1">
 <a class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 bg-white dark:bg-slate-900 px-3 py-2 rounded-md shadow" href="#main">Skip to content</a>
-<header id="site-header" class="sticky top-0 z-40 transition-all duration-300 bg-white/80 backdrop-blur dark:bg-slate-900/70">
-  <div class="mx-auto max-w-screen-xl px-4">
-    <div id="header-inner" class="flex items-center justify-between py-3 lg:py-4">
-      <!-- Brand -->
-      <a href="/index.html" class="flex items-center gap-2">
-        <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">TC</span>
-        <span class="font-display text-lg font-semibold tracking-wide">Team Combat USA</span>
-      </a>
-
-      <!-- Desktop nav -->
-      <nav id="primary-nav" aria-label="Primary" class="hidden gap-6 md:flex is-collapsible">
-        <a class="nav-link" href="/index.html">Home</a>
-        <a class="nav-link" href="/warrior-ethos.html">Warrior-Ethos</a>
-        <a class="nav-link" href="/history.html">History</a>
-        <a class="nav-link" href="/styles.html">Styles</a>
-        <a class="nav-link" href="/fundamentals.html">Fundamentals</a>
-        <a class="nav-link" href="/gameplan.html">Gameplan</a>
-        <a class="nav-link" href="/top-positions.html">Top Positions</a>
-        <a class="nav-link text-brand-700 font-semibold" aria-current="page" href="/standing.html">Standing</a>
-        <a class="nav-link" href="/bottom-positions.html">Bottom Positions</a>
-        <a class="nav-link" href="/leg-entanglement-positions.html">Leg Entanglement</a>
-        <a class="nav-link" href="/fitness.html">Fitness</a>
-        <a class="nav-link" href="/drills.html">Drills</a>
-        <a class="nav-link" href="/competition.html">Competition</a>
-        <a class="nav-link" href="/self-defense.html">Self-Defense</a>
-        <a class="nav-link" href="/inspiration.html">Inspiration</a>
-      </nav>
-
-      <!-- Buttons -->
-      <div class="flex items-center gap-2 md:gap-3">
-        <button id="theme-toggle" data-theme-toggle aria-label="Toggle dark mode"
-                class="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-700 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-200 dark:hover:bg-slate-800"
-                type="button">☾</button>
-
-        <!-- Mobile menu toggle (no data-menu-toggle) -->
-        <button id="menu-toggle" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-900 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-100 dark:hover:bg-slate-800" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
-          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Mobile drawer -->
-  <div id="mobile-menu" data-open="false" class="absolute inset-x-0 top-full z-30 md:hidden duration-200 invisible opacity-0 -translate-y-2 h-[calc(100dvh-64px)]">
-    <div class="mx-4 rounded-2xl border border-slate-200/60 bg-white/95 shadow-xl backdrop-blur dark:border-slate-800 dark:bg-slate-900/90 p-4">
-      <nav aria-label="Mobile" class="grid gap-2 text-base">
-        <a class="nav-link" href="/index.html">Home</a>
-        <a class="nav-link" href="/warrior-ethos.html">Warrior-Ethos</a>
-        <a class="nav-link" href="/history.html">History</a>
-        <a class="nav-link" href="/styles.html">Styles</a>
-        <a class="nav-link" href="/fundamentals.html">Fundamentals</a>
-        <a class="nav-link" href="/gameplan.html">Gameplan</a>
-        <a class="nav-link" href="/top-positions.html">Top Positions</a>
-        <a class="nav-link text-brand-700 font-semibold" aria-current="page" href="/standing.html">Standing</a>
-        <a class="nav-link" href="/bottom-positions.html">Bottom Positions</a>
-        <a class="nav-link" href="/leg-entanglement-positions.html">Leg Entanglement</a>
-        <a class="nav-link" href="/fitness.html">Fitness</a>
-        <a class="nav-link" href="/drills.html">Drills</a>
-        <a class="nav-link" href="/competition.html">Competition</a>
-        <a class="nav-link" href="/self-defense.html">Self-Defense</a>
-        <a class="nav-link" href="/inspiration.html">Inspiration</a>
-      </nav>
-    </div>
-  </div>
+<header class="sticky top-0 z-40 transition-all duration-300 bg-white/80 backdrop-blur dark:bg-slate-900/70" id="site-header">
+<div class="mx-auto max-w-screen-xl px-4">
+<div class="flex items-center justify-between py-3 lg:py-4" id="header-inner">
+<!-- Brand -->
+<a class="flex items-center gap-2" href="/index.html">
+<span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">TC</span>
+<span class="font-display text-lg font-semibold tracking-wide">Team Combat USA</span>
+</a>
+<!-- Desktop nav -->
+<nav aria-label="Primary" class="hidden gap-6 md:flex is-collapsible" id="primary-nav">
+<a class="nav-link" href="/index.html">Home</a>
+<a class="nav-link" href="/warrior-ethos.html">Warrior-Ethos</a>
+<a class="nav-link" href="/history.html">History</a>
+<a class="nav-link" href="/styles.html">Styles</a>
+<a class="nav-link" href="/fundamentals.html">Fundamentals</a>
+<a class="nav-link" href="/gameplan.html">Gameplan</a>
+<a class="nav-link" href="/top-positions.html">Top Positions</a>
+<a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/standing.html">Standing</a>
+<a class="nav-link" href="/bottom-positions.html">Bottom Positions</a>
+<a class="nav-link" href="/leg-entanglement-positions.html">Leg Entanglement</a>
+<a class="nav-link" href="/fitness.html">Fitness</a>
+<a class="nav-link" href="/drills.html">Drills</a>
+<a class="nav-link" href="/competition.html">Competition</a>
+<a class="nav-link" href="/self-defense.html">Self-Defense</a>
+<a class="nav-link" href="/inspiration.html">Inspiration</a>
+</nav>
+<!-- Buttons -->
+<div class="flex items-center gap-2 md:gap-3">
+<button aria-label="Toggle dark mode" class="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-700 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-200 dark:hover:bg-slate-800" data-theme-toggle="" id="theme-toggle" type="button">☾</button>
+<!-- Mobile menu toggle (no data-menu-toggle) -->
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-900 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-100 dark:hover:bg-slate-800" id="menu-toggle" type="button">
+<svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile drawer -->
+<div class="absolute inset-x-0 top-full z-30 md:hidden duration-200 invisible opacity-0 -translate-y-2 h-[calc(100dvh-64px)]" data-open="false" id="mobile-menu">
+<div class="mx-4 rounded-2xl border border-slate-200/60 bg-white/95 shadow-xl backdrop-blur dark:border-slate-800 dark:bg-slate-900/90 p-4">
+<nav aria-label="Mobile" class="grid gap-2 text-base">
+<a class="nav-link" href="/index.html">Home</a>
+<a class="nav-link" href="/warrior-ethos.html">Warrior-Ethos</a>
+<a class="nav-link" href="/history.html">History</a>
+<a class="nav-link" href="/styles.html">Styles</a>
+<a class="nav-link" href="/fundamentals.html">Fundamentals</a>
+<a class="nav-link" href="/gameplan.html">Gameplan</a>
+<a class="nav-link" href="/top-positions.html">Top Positions</a>
+<a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/standing.html">Standing</a>
+<a class="nav-link" href="/bottom-positions.html">Bottom Positions</a>
+<a class="nav-link" href="/leg-entanglement-positions.html">Leg Entanglement</a>
+<a class="nav-link" href="/fitness.html">Fitness</a>
+<a class="nav-link" href="/drills.html">Drills</a>
+<a class="nav-link" href="/competition.html">Competition</a>
+<a class="nav-link" href="/self-defense.html">Self-Defense</a>
+<a class="nav-link" href="/inspiration.html">Inspiration</a>
+</nav>
+</div>
+</div>
 </header>
-
 <section class="relative isolate overflow-hidden bg-gradient-to-b from-brand-800 to-brand-700 py-16 text-white">
 <div class="mx-auto max-w-screen-xl px-4">
 <div class="max-w-2xl">
@@ -141,16 +145,9 @@
 </aside>
 <!-- Feature photo -->
 <section class="mt-10">
-  <div class="mx-auto max-w-5xl px-4">
-    <img
-      src="/assets/img/instructor_standing_cropped.png"
-      alt="Instructor competing in a standing position"
-      class="w-full rounded-xl shadow mb-6"
-      loading="lazy"
-      width="1200"
-      height="800"
-    />
-  </div>
+<div class="mx-auto max-w-5xl px-4">
+<img alt="Instructor competing in a standing position" class="w-full rounded-xl shadow mb-6" height="800" loading="lazy" src="/assets/img/instructor_standing_cropped.png" width="1200"/>
+</div>
 </section>
 <section class="w-full px-4 py-12 bg-gray-50 dark:bg-gray-900 rounded-xl shadow mb-8" id="standing-position">
 <div class="flow mx-auto max-w-4xl">
@@ -486,7 +483,7 @@
 <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/top-positions.html">
        Top Positions
       </a>
-<a class="nav-link text-brand-700 font-semibold text-sm dark:text-slate-200" aria-current="page" href="/standing.html">Standing</a>
+<a aria-current="page" class="nav-link text-brand-700 font-semibold text-sm dark:text-slate-200" href="/standing.html">Standing</a>
 <a class="nav-link text-slate-700 hover:text-brand-700 text-sm dark:text-slate-200" href="/bottom-positions.html">
        Bottom Positions
       </a>
@@ -557,7 +554,6 @@
   }
 })();
   </script>
-
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     var btn = document.getElementById('menu-toggle');
@@ -591,7 +587,6 @@
     setOpen(false);
   });
 </script>
-
 <script>
 (function () {
   if (window.__TC_BTT_SHADOW__) return;
