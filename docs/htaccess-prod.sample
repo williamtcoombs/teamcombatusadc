@@ -1,3 +1,5 @@
+docs(ops): mark htaccess files as reference-only
+
 # Begin cache control #
 ErrorDocument 404 /404.html
 ExpiresActive on
