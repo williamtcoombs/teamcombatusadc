@@ -1,0 +1,26 @@
+path,why_keep,examples
+404.html,entry HTML,
+assets/img/favicon-32x32.png,icon link in HTML; referenced asset; referenced by HTML attr,404.html → /assets/img/favicon-32x32.png | bottom-positions.html → /assets/img/favicon-32x32.png | competition.html → /assets/img/favicon-32x32.png
+assets/img/favicon-48x48.png,icon link in HTML; referenced asset; referenced by HTML attr,404.html → /assets/img/favicon-48x48.png | bottom-positions.html → /assets/img/favicon-48x48.png | competition.html → /assets/img/favicon-48x48.png
+assets/img/favicon-96x96.png,icon link in HTML; referenced asset; referenced by HTML attr,404.html → /assets/img/favicon-96x96.png | bottom-positions.html → /assets/img/favicon-96x96.png | competition.html → /assets/img/favicon-96x96.png
+assets/img/favicon-head-snippet.html,entry HTML,
+assets/img/favicon.ico,icon link in HTML; referenced asset; referenced by HTML attr,404.html → /assets/img/favicon.ico | bottom-positions.html → /assets/img/favicon.ico | competition.html → /assets/img/favicon.ico
+assets/img/favicon.svg,icon link in HTML; referenced asset; referenced by HTML attr,404.html → /assets/img/favicon.svg | bottom-positions.html → /assets/img/favicon.svg | competition.html → /assets/img/favicon.svg
+assets/site.css,compiled CSS; referenced by HTML attr,404.html → /assets/site.css | bottom-positions.html → /assets/site.css | competition.html → /assets/site.css
+assets/site.js,main JS; referenced by HTML attr,404.html → /assets/site.js | bottom-positions.html → /assets/site.js | competition.html → /assets/site.js
+bottom-positions.html,entry HTML,404.html → /bottom-positions.html | bottom-positions.html → /bottom-positions.html | competition.html → /bottom-positions.html
+competition.html,entry HTML,404.html → /competition.html | bottom-positions.html → /competition.html | competition.html → /competition.html
+drills.html,entry HTML,404.html → /drills.html | bottom-positions.html → /drills.html | competition.html → /drills.html
+fitness.html,entry HTML,404.html → /fitness.html | bottom-positions.html → /fitness.html | competition.html → /fitness.html
+fundamentals.html,entry HTML,404.html → /fundamentals.html | bottom-positions.html → /fundamentals.html | competition.html → /fundamentals.html
+gameplan.html,entry HTML,404.html → /gameplan.html | bottom-positions.html → /gameplan.html | competition.html → /gameplan.html
+history.html,entry HTML,404.html → /history.html | bottom-positions.html → /history.html | competition.html → /history.html
+index.html,entry HTML,404.html → /index.html | bottom-positions.html → /index.html | competition.html → /index.html
+inspiration.html,entry HTML,404.html → /inspiration.html | bottom-positions.html → /inspiration.html | competition.html → /inspiration.html
+leg-entanglement-positions.html,entry HTML,404.html → /leg-entanglement-positions.html | bottom-positions.html → /leg-entanglement-positions.html | competition.html → /leg-entanglement-positions.html
+self-defense.html,entry HTML,404.html → /self-defense.html | bottom-positions.html → /self-defense.html | competition.html → /self-defense.html
+sitemap.xml,referenced by HTML attr; sitemap,404.html → /sitemap.xml
+standing.html,entry HTML,404.html → /standing.html | bottom-positions.html → /standing.html | competition.html → /standing.html
+styles.html,entry HTML,404.html → /styles.html | bottom-positions.html → /styles.html | competition.html → /styles.html
+top-positions.html,entry HTML,404.html → /top-positions.html | bottom-positions.html → /top-positions.html | competition.html → /top-positions.html
+warrior-ethos.html,entry HTML,404.html → /warrior-ethos.html | bottom-positions.html → /warrior-ethos.html | competition.html → /warrior-ethos.html
