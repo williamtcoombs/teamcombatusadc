@@ -1,5 +1,6 @@
 // tailwind.config.js
 const defaultTheme = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -13,6 +14,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+      // Use Tailwind's red scale as our brand for now
+      brand: colors.red,
+    },
       fontFamily: {
         // keep Tailwind's default sans stack
         sans: [...defaultTheme.fontFamily.sans],
