@@ -4,9 +4,10 @@
   const menu = document.getElementById('mobile-menu');
   if (!toggle || !menu) return;
 
-  // classes you already use to hide the drawer
+  // Classes you already use to hide the drawer
   const hideClasses = ['hidden', 'invisible', 'opacity-0', '-translate-y-2'];
 
+  // Utility: find focusable elements (links, buttons, inputs, etc.)
   function getFocusable(root) {
     const selector = [
       'a[href]',
@@ -24,20 +25,42 @@
 
   function setOpen(isOpen) {
     toggle.setAttribute('aria-expanded', String(isOpen));
+
     if (isOpen) {
+      // Show menu
       hideClasses.forEach(c => menu.classList.remove(c));
-      document.body.style.overflow = 'hidden'; // scroll lock without Tailwind dep
+
+      // Lock background scroll (no CSS utility needed)
+      document.body.style.overflow = 'hidden';
+
+      // Mark main as hidden to screen readers (optional but good)
+      const main = document.querySelector('main');
+      if (main) main.setAttribute('aria-hidden', 'true');
+
+      // Activate keyboard handling
       trapActive = true;
-      menu.setAttribute('tabindex', '-1'); // ensure menu can receive focus
+      document.addEventListener('keydown', onKeydown, true);
+
+      // Ensure menu itself can take focus, then move focus inside
+      if (!menu.hasAttribute('tabindex')) menu.setAttribute('tabindex', '-1');
       const first = getFocusable(menu)[0] || menu;
       first.focus({ preventScroll: true });
-      document.addEventListener('keydown', onKeydown, true);
+
     } else {
+      // Hide menu
       hideClasses.forEach(c => menu.classList.add(c));
-      document.body.style.overflow = ''; // restore scroll
+
+      // Restore scroll
+      document.body.style.overflow = '';
+
+      // Restore SR visibility of main
+      const main = document.querySelector('main');
+      if (main) main.removeAttribute('aria-hidden');
+
+      // Deactivate keyboard handling and return focus
       trapActive = false;
       document.removeEventListener('keydown', onKeydown, true);
-      toggle.focus({ preventScroll: true }); // return focus to hamburger
+      toggle.focus({ preventScroll: true });
     }
   }
 
@@ -51,7 +74,7 @@
       return;
     }
 
-    // Always handle Tab ourselves so it works even when browser won't tab to links
+    // Force Tab focus movement even when browser wouldn't tab to links
     if (e.key === 'Tab') {
       e.preventDefault();
       const focusables = getFocusable(menu);
@@ -61,10 +84,7 @@
       }
       const active = document.activeElement;
       let idx = focusables.indexOf(active);
-      if (idx === -1) {
-        focusables[0].focus();
-        return;
-      }
+      if (idx === -1) idx = -1; // start before first
       idx += e.shiftKey ? -1 : 1;
       if (idx < 0) idx = focusables.length - 1;
       if (idx >= focusables.length) idx = 0;
@@ -72,23 +92,23 @@
     }
   }
 
-  // init closed
+  // Init closed (also normalizes aria-expanded)
   setOpen(false);
 
-  // toggle click
+  // Toggle click
   toggle.addEventListener('click', () => {
     const open = toggle.getAttribute('aria-expanded') === 'true';
     setOpen(!open);
   });
 
-  // close when a link/button inside the menu is clicked
+  // Close when clicking any link/button inside the menu
   menu.addEventListener('click', (e) => {
     const el = e.target.closest('a, button');
     if (!el) return;
     if (toggle.getAttribute('aria-expanded') === 'true') setOpen(false);
   });
 
-  // optional: auto-close if resized to desktop width (Tailwind lg = 1024)
+  // Optional: auto-close if resized to desktop width (Tailwind lg = 1024)
   window.addEventListener('resize', () => {
     const open = toggle.getAttribute('aria-expanded') === 'true';
     if (open && window.innerWidth >= 1024) setOpen(false);
