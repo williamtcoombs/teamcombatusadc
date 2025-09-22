@@ -2,6 +2,14 @@
 
 <html class="scroll-smooth" lang="en">
 <head>
+<script>
+// Force light theme: never allow 'dark' class or saved theme to flip colors
+(function () {
+  var root = document.documentElement;
+  root.classList.remove('dark');
+  try { localStorage.removeItem('theme'); } catch (e) {}
+})();
+</script>
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
