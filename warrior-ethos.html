@@ -2,20 +2,25 @@
 
 <html class="scroll-smooth" lang="en">
 <head>
+<head>
+  <script>
+    /* Light-only mode guard (standardized). */
+    (function () {
+      try {
+        var root = document.documentElement;
+        if (root && root.classList) root.classList.remove('dark');
+        if (typeof localStorage !== 'undefined') {
+          localStorage.setItem('theme', 'light');
+        }
+      } catch (_) {}
+    })();
+  </script>
 <title>Warrior-Ethos — Team Combat USA</title>
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&amp;family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
 <!-- Styles -->
-<script>
-  // Force light theme site-wide
-  (function () {
-    var root = document.documentElement;
-    root.classList.remove('dark');
-    try { localStorage.removeItem('theme'); } catch (e) {}
-  })();
-</script>
 <link href="/assets/site.css" rel="stylesheet"/>
 <!-- Meta -->
 <meta charset="utf-8"/>
