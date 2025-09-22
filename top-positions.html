@@ -2,6 +2,19 @@
 
 <html class="scroll-smooth" lang="en">
 <head>
+  <script>
+    /* Light-only mode guard (standardized). */
+    (function () {
+      try {
+        var root = document.documentElement;
+        if (root && root.classList) root.classList.remove('dark');
+        if (typeof localStorage !== 'undefined') {
+          localStorage.setItem('theme', 'light');
+        }
+      } catch (_) {}
+    })();
+  </script>
+
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -84,7 +97,13 @@
 </nav>
 <!-- Buttons -->
 <div class="flex items-center gap-2 md:gap-3">
-<button aria-label="Toggle dark mode" class="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-700 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-200 dark:hover:bg-slate-800" data-theme-toggle="" id="theme-toggle" type="button">☾</button>
+<button aria-label="Toggle dark mode"
+        id="theme-toggle"
+        type="button"
+        aria-hidden="true"
+        tabindex="-1"
+        hidden
+        class="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-700 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-200 dark:hover:bg-slate-800 hidden">☾</button>
 <!-- Mobile menu toggle (no data-menu-toggle) -->
 <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-900 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-100 dark:hover:bg-slate-800" id="menu-toggle" type="button">
 <svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" viewbox="0 0 24 24">
