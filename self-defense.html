@@ -2,6 +2,19 @@
 
 <html class="scroll-smooth" lang="en">
 <head>
+  <script>
+    /* Light-only mode guard (standardized). */
+    (function () {
+      try {
+        var root = document.documentElement;
+        if (root && root.classList) root.classList.remove('dark');
+        if (typeof localStorage !== 'undefined') {
+          localStorage.setItem('theme', 'light');
+        }
+      } catch (_) {}
+    })();
+  </script>
+
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
