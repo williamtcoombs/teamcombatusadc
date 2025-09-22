@@ -8,6 +8,14 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&amp;family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
 <!-- Styles -->
+<script>
+  // Force light theme site-wide
+  (function () {
+    var root = document.documentElement;
+    root.classList.remove('dark');
+    try { localStorage.removeItem('theme'); } catch (e) {}
+  })();
+</script>
 <link href="/assets/site.css" rel="stylesheet"/>
 <!-- Meta -->
 <meta charset="utf-8"/>
@@ -27,7 +35,7 @@
 <meta content="website" property="og:type"/>
 <meta content="Team Combat USA" property="og:site_name"/>
 <meta content="Warrior-Ethos — Team Combat USA" property="og:title"/>
-<meta content="Mindset pillars, principles, and conduct that shape how we train and how we live." property="og:description"/>
+<meta content="The Warrior-Ethos: mindset, principles, and conduct that guide Team Combat USA." property="og:description"/>
 <meta content="https://www.teamcombatusadc.com/warrior-ethos.html" property="og:url"/>
 <meta content="https://www.teamcombatusadc.com/assets/img/og-default.png" property="og:image"/>
 <meta content="summary_large_image" name="twitter:card"/>
@@ -59,13 +67,13 @@
 <div class="mx-auto max-w-screen-xl px-4">
 <div class="flex items-center justify-between py-3 lg:py-4" id="header-inner">
 <!-- Brand -->
-<a class="flex items-center gap-2" href="/index.html">
+<a class="flex items-center gap-2" href="/">
 <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-700 text-white">TC</span>
 <span class="font-display text-lg font-semibold tracking-wide">Team Combat USA</span>
 </a>
 <!-- Desktop nav -->
 <nav aria-label="Primary" class="hidden gap-6 md:flex is-collapsible" id="primary-nav">
-<a class="nav-link" href="/index.html">Home</a>
+<a class="nav-link" href="/">Home</a>
 <a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/warrior-ethos.html">Warrior-Ethos</a>
 <a class="nav-link" href="/history.html">History</a>
 <a class="nav-link" href="/styles.html">Styles</a>
@@ -83,7 +91,19 @@
 </nav>
 <!-- Buttons -->
 <div class="flex items-center gap-2 md:gap-3">
-<button aria-label="Toggle dark mode" class="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-700 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-200 dark:hover:bg-slate-800" data-theme-toggle="" id="theme-toggle" type="button">☾</button>
+<button
+  id="theme-toggle"
+  hidden
+  aria-hidden="true"
+  tabindex="-1"
+  style="display:none"
+  aria-label="Toggle dark mode"
+  class="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-700 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-200 dark:hover:bg-slate-800"
+  type="button"
+>
+  ☾
+</button>
+
 <!-- Mobile menu toggle (no data-menu-toggle) -->
 <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/60 text-slate-900 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-100 dark:hover:bg-slate-800" id="menu-toggle" type="button">
 <svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" viewbox="0 0 24 24">
@@ -97,7 +117,7 @@
 <div class="absolute inset-x-0 top-full z-30 md:hidden duration-200 invisible opacity-0 -translate-y-2 h-[calc(100dvh-64px)]" data-open="false" id="mobile-menu">
 <div class="mx-4 rounded-2xl border border-slate-200/60 bg-white/95 shadow-xl backdrop-blur dark:border-slate-800 dark:bg-slate-900/90 p-4">
 <nav aria-label="Mobile" class="grid gap-2 text-base">
-<a class="nav-link" href="/index.html">Home</a>
+<a class="nav-link" href="/">Home</a>
 <a aria-current="page" class="nav-link text-brand-700 font-semibold" href="/warrior-ethos.html">Warrior-Ethos</a>
 <a class="nav-link" href="/history.html">History</a>
 <a class="nav-link" href="/styles.html">Styles</a>
@@ -377,7 +397,7 @@
        </span>
 </div>
 <nav aria-label="Primary" class="hidden gap-6 md:flex">
-<a class="nav-link text-sm dark:text-slate-200" href="/index.html">
+<a class="nav-link text-sm dark:text-slate-200" href="/">
         Home
        </a>
 <a aria-current="page" class="nav-link text-brand-700 font-semibold text-sm dark:text-slate-200" href="/warrior-ethos.html">Warrior-Ethos</a>
@@ -422,12 +442,7 @@
        </a>
 </nav>
 </div>
-<p class="mt-6 text-xs text-slate-500">
-      ©
-      <span id="year">
-</span>
-      Team Combat USA. All rights reserved.
-     </p>
+<p class="mt-6 text-xs text-slate-500">© Team Combat USA</p>
 </div>
 </footer>
 <!-- Back to top -->
