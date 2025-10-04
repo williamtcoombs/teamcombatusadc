@@ -13,15 +13,19 @@ module.exports = {
     'border-orange-400',
     'text-white',
   ],
-  theme: {
-    extend: {
-      colors: {
-        brand: colors.red, // alias to Tailwind’s red scale
-      },
-      fontFamily: {
-        sans: [...defaultTheme.fontFamily.sans],
-      },
-    },
-  },
+     theme: {
+     extend: {
+       colors: {
+        // Lock brand utilities to the exact brand hex
+        // e.g., text-brand-700 / bg-brand-700 / border-brand-700
+        brand: {
+          700: '#991b1b',
+        },
+       },
+       fontFamily: {
+         sans: [...defaultTheme.fontFamily.sans],
+       },
+     },
+   },
   plugins: [],
 };
