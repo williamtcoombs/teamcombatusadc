@@ -9,12 +9,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Custom brand color (exact hex)
+        // Custom brand palette
         brand: {
-          700: "#991b1b",
-          // Optional: add lighter/darker shades if you need them later
+          700: "#991b1b", // main hero red
+          800: "#7f1d1d", // darker step for gradients
+          // Optional lighter step if you need it later:
           // 600: "#a61e1e",
-          // 800: "#861818",
         },
       },
       fontFamily: {
@@ -23,7 +23,6 @@ module.exports = {
     },
   },
   safelist: [
-    // Your transition/menu classes
     "hidden", "invisible", "opacity-0", "-translate-y-2", "translate-y-0",
   ],
   plugins: [],
