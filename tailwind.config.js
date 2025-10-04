@@ -1,31 +1,30 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
-const colors = require('tailwindcss/colors');
+/** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  content: ["./**/*.html", "./assets/**/*.js"],
-  safelist: [
-    'hidden',
-    'invisible',
-    'opacity-0',
-    '-translate-y-2',
-    'text-slate-900',
-    'border-b-2',
-    'border-orange-400',
-    'text-white',
+  content: [
+    "./*.html",
+    "./assets/**/*.js",
   ],
-     theme: {
-     extend: {
-       colors: {
-        // Lock brand utilities to the exact brand hex
-        // e.g., text-brand-700 / bg-brand-700 / border-brand-700
+  theme: {
+    extend: {
+      colors: {
+        // Custom brand color (exact hex)
         brand: {
-          700: '#991b1b',
+          700: "#991b1b",
+          // Optional: add lighter/darker shades if you need them later
+          // 600: "#a61e1e",
+          // 800: "#861818",
         },
-       },
-       fontFamily: {
-         sans: [...defaultTheme.fontFamily.sans],
-       },
-     },
-   },
+      },
+      fontFamily: {
+        sans: [...defaultTheme.fontFamily.sans],
+      },
+    },
+  },
+  safelist: [
+    // Your transition/menu classes
+    "hidden", "invisible", "opacity-0", "-translate-y-2", "translate-y-0",
+  ],
   plugins: [],
 };
